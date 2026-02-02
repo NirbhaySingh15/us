@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shalu ❤️ We Made It</title>
+<title>Shalu ❤️ This Is Us</title>
 
 <style>
   body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    background: linear-gradient(135deg, #ffe6eb, #f7b7c8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,44 +18,38 @@
   }
 
   .card {
-    background: rgba(255,255,255,0.92);
+    background: rgba(255,255,255,0.95);
     width: 92%;
     max-width: 420px;
-    padding: 25px;
-    border-radius: 20px;
+    padding: 28px;
+    border-radius: 22px;
     text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    animation: fadeIn 1.2s ease;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.2);
+    animation: fadeIn 1.3s ease;
   }
 
   h1 {
     font-size: 26px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   p {
     font-size: 16px;
-    line-height: 1.7;
-    margin: 12px 0;
+    line-height: 1.8;
+    margin: 14px 0;
   }
 
   .heart {
-    font-size: 32px;
-    animation: pulse 1.6s infinite;
-  }
-
-  @keyframes pulse {
-    0% {transform: scale(1);}
-    50% {transform: scale(1.2);}
-    100% {transform: scale(1);}
+    font-size: 34px;
+    animation: pulse 1.8s infinite;
   }
 
   button {
-    margin-top: 20px;
-    padding: 12px 26px;
+    margin-top: 22px;
+    padding: 13px 28px;
     font-size: 16px;
     border: none;
-    border-radius: 25px;
+    border-radius: 28px;
     background: #ff6f91;
     color: white;
     cursor: pointer;
@@ -63,99 +57,113 @@
 
   #final {
     display: none;
-    animation: fadeIn 1.2s ease forwards;
+    animation: fadeIn 1.3s ease forwards;
   }
 
   .date-box {
-    margin-top: 18px;
-    padding: 14px;
-    border-radius: 15px;
-    background: #fff0f3;
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 16px;
+    background: #fff1f4;
     font-size: 18px;
     font-weight: bold;
     color: #b03052;
-    animation: glow 2s infinite alternate;
   }
 
-  @keyframes glow {
-    from {box-shadow: 0 0 8px rgba(255,111,145,0.4);}
-    to {box-shadow: 0 0 16px rgba(255,111,145,0.8);}
-  }
-
-  .small {
+  .soft {
     font-size: 14px;
     opacity: 0.85;
-    margin-top: 12px;
+    margin-top: 16px;
   }
 
   @keyframes fadeIn {
-    from {opacity: 0; transform: translateY(10px);}
+    from {opacity: 0; transform: translateY(12px);}
     to {opacity: 1; transform: translateY(0);}
+  }
+
+  @keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.25);}
+    100% {transform: scale(1);}
   }
 </style>
 </head>
 
 <body>
 
+<!-- 🎵 Music -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
 <div class="card" id="page1">
   <div class="heart">❤️</div>
   <h1>Shalu</h1>
 
   <p>
-    This is not a proposal.
+    This isn’t a question.  
+    And it isn’t a surprise.
   </p>
 
   <p>
-    This is a reminder  
-    of everything we stood through  
-    and everything we chose.
+    It’s just me,  
+    telling you something I feel  
+    every single day.
   </p>
 
   <p>
-    After so many hurdles…  
-    we didn’t let go.
+    After everything we faced,  
+    every hurdle that tried to shake us…
   </p>
 
-  <p><strong>We believed.</strong></p>
+  <p>
+    you stayed.  
+    and so did I.
+  </p>
 
-  <button onclick="nextPage()">Tap gently 💕</button>
+  <button onclick="startLove()">Tap gently 💕</button>
 </div>
 
 <div class="card" id="final">
-  <h1>We Made It 🥹❤️</h1>
+  <h1>This Is Us 🥹❤️</h1>
 
   <p>
-    Not because it was easy,  
-    but because it was us.
+    We didn’t reach here by luck.  
+    We reached here by choosing each other  
+    again and again.
   </p>
 
   <p>
-    Thank you for choosing love  
-    even when things felt heavy.
+    Thank you for trusting me,  
+    for holding my hand  
+    when the road felt heavy.
   </p>
 
   <p>
     From now on,  
-    it’s not questions or waiting.
+    I promise you something simple—
   </p>
 
   <p>
-    It’s certainty.  
-    It’s calm.  
-    It’s forever.
+    You’ll never walk alone.
   </p>
 
   <div class="date-box">
     30 • November • 2026 💍
   </div>
 
-  <p class="small">
-    Happy Valentine’s Day, my wife ❤️
+  <p class="soft">
+    Happy Valentine’s Day, Shalu.  
+    My heart is home with you ❤️
   </p>
 </div>
 
 <script>
-  function nextPage() {
+  function startLove() {
+    const music = document.getElementById("bgMusic");
+    music.volume = 0.35;
+    music.play().catch(() => {});
+
     document.getElementById("page1").style.display = "none";
     document.getElementById("final").style.display = "block";
   }
